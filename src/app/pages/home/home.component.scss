@@ -1,0 +1,23 @@
+.append-button {
+    margin-left: -40px; /* Adjust the margin to position the button */
+    padding: 5px 10px;
+    color: #fff; /* Button text color */
+    border: none;
+    border-radius: 0 5px 5px 0; /* Rounded border on the right side */
+    cursor: pointer;
+}
+
+.circle-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #fff; /* Add a white border */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect */
+    transform: scale(1.05); /* Scale up the image slightly for the 3D effect */
+    transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
+  }
+  /* Hover effect to make it more pronounced */
+  .circle-image:hover {
+    transform: scale(1.1); /* Scale it up a bit more on hover */
+  }
