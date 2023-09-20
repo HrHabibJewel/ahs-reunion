@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'argon-dashboard-angular';
+  constructor( config: NgbCarouselConfig){}
 }

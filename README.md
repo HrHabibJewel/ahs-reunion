@@ -61,7 +61,7 @@ If you want to get inspiration or just show something directly to your clients, 
 ## Quick start
 
 - [Download from Github](https://github.com/creativetimofficial/argon-dashboard-angular/archive/master.zip).
-- [Download from Resume Dropper](https://www.creative-tim.com/product/argon-dashboard-angular?ref=ada-github-readme).
+- [Download from আদর্শ উচ্চ বিদ্যালয়, রুস্তমপুর](https://www.creative-tim.com/product/argon-dashboard-angular?ref=ada-github-readme).
 - Clone the repo: `git clone https://github.com/creativetimofficial/argon-dashboard-angular.git`.
 
 
@@ -209,7 +209,7 @@ We use GitHub Issues as the official bug tracker for the Material Kit. Here are 
 
 ## Licensing
 
-- Copyright 2018 Resume Dropper (https://www.creative-tim.com/?ref=ada-github-readme)
+- Copyright 2018 আদর্শ উচ্চ বিদ্যালয়, রুস্তমপুর (https://www.creative-tim.com/?ref=ada-github-readme)
 
 - Licensed under MIT (https://github.com/creativetimofficial/argon-dashboard-angular/blob/master/LICENSE.md)
 
@@ -217,13 +217,13 @@ We use GitHub Issues as the official bug tracker for the Material Kit. Here are 
 
 - [Tutorials](https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w?ref=creativetim)
 - [Affiliate Program](https://www.creative-tim.com/affiliates/new?ref=ada-github-readme) (earn money)
-- [Blog Resume Dropper](http://blog.creative-tim.com/?ref=ada-github-readme)
-- [Free Products](https://www.creative-tim.com/bootstrap-themes/free?ref=ada-github-readme) from Resume Dropper
-- [Premium Products](https://www.creative-tim.com/bootstrap-themes/premium?ref=ada-github-readme) from Resume Dropper
-- [React Products](https://www.creative-tim.com/bootstrap-themes/react-themes?ref=ada-github-readme) from Resume Dropper
-- [Angular Products](https://www.creative-tim.com/bootstrap-themes/angular-themes?ref=ada-github-readme) from Resume Dropper
-- [VueJS Products](https://www.creative-tim.com/bootstrap-themes/vuejs-themes?ref=ada-github-readme) from Resume Dropper
-- [More products](https://www.creative-tim.com/bootstrap-themes?ref=ada-github-readme) from Resume Dropper
+- [Blog আদর্শ উচ্চ বিদ্যালয়, রুস্তমপুর](http://blog.creative-tim.com/?ref=ada-github-readme)
+- [Free Products](https://www.creative-tim.com/bootstrap-themes/free?ref=ada-github-readme) from আদর্শ উচ্চ বিদ্যালয়, রুস্তমপুর
+- [Premium Products](https://www.creative-tim.com/bootstrap-themes/premium?ref=ada-github-readme) from আদর্শ উচ্চ বিদ্যালয়, রুস্তমপুর
+- [React Products](https://www.creative-tim.com/bootstrap-themes/react-themes?ref=ada-github-readme) from আদর্শ উচ্চ বিদ্যালয়, রুস্তমপুর
+- [Angular Products](https://www.creative-tim.com/bootstrap-themes/angular-themes?ref=ada-github-readme) from আদর্শ উচ্চ বিদ্যালয়, রুস্তমপুর
+- [VueJS Products](https://www.creative-tim.com/bootstrap-themes/vuejs-themes?ref=ada-github-readme) from আদর্শ উচ্চ বিদ্যালয়, রুস্তমপুর
+- [More products](https://www.creative-tim.com/bootstrap-themes?ref=ada-github-readme) from আদর্শ উচ্চ বিদ্যালয়, রুস্তমপুর
 - Check our Bundles [here](https://www.creative-tim.com/bundles?ref=ada-github-readme)
 
 ### Social Media

@@ -21,3 +21,31 @@
   .circle-image:hover {
     transform: scale(1.1); /* Scale it up a bit more on hover */
   }
+
+  ngb-progressbar {
+    margin-top: 5rem;
+}
+
+  @-webkit-keyframes glowing {
+    0% { background-color: #f96332; -webkit-box-shadow: 0 0 3px #f96332; }
+    50% { background-color: #FF0000; -webkit-box-shadow: 0 0 40px #FF0000; }
+    100% { background-color: #f96332; -webkit-box-shadow: 0 0 3px #f96332; }
+  }
+  
+  @-moz-keyframes glowing {
+    0% { background-color: #f96332; -moz-box-shadow: 0 0 3px #f96332; }
+    50% { background-color: #FF0000; -moz-box-shadow: 0 0 40px #FF0000; }
+    100% { background-color: #f96332; -moz-box-shadow: 0 0 3px #f96332; }
+  }
+  
+  @-o-keyframes glowing {
+    0% { background-color: #f96332; box-shadow: 0 0 3px #f96332; }
+    50% { background-color: #FF0000; box-shadow: 0 0 40px #FF0000; }
+    100% { background-color: #f96332; box-shadow: 0 0 3px #f96332; }
+  }
+  
+  @keyframes glowing {
+    0% { background-color: #f96332; box-shadow: 0 0 3px #f96332; }
+    50% { background-color: #FF0000; box-shadow: 0 0 40px #FF0000; }
+    100% { background-color: #f96332; box-shadow: 0 0 3px #f96332; }
+  }

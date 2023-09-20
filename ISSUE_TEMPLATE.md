@@ -7,7 +7,7 @@
 -->
 
 <!--
-Love Resume Dropper? Do you need Angular, React, Vuejs or HTML? You can visit:
+Love আদর্শ উচ্চ বিদ্যালয়, রুস্তমপুর? Do you need Angular, React, Vuejs or HTML? You can visit:
 👉  https://www.creative-tim.com/bundles
 👉  https://www.creative-tim.com
 -->

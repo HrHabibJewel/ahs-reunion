@@ -1,0 +1,236 @@
+<div class="header py-7 py-lg-8" >
+    <div class="container">
+      
+      
+      <div class="row"  *ngIf="!showSuccessDiv">
+        <div class="col-md-1"></div>
+            <div class="col-md-4">
+                <div class="card content-center" style="border-radius: 40px; padding: 20px; color: #000000;">
+                    <ul>
+                        <li><h4>রেজিস্ট্রেশন ফিঃ</h4>
+                            <ul>
+                                <li>দেশে অবস্থানরত হলে- ১০০০/-</li>
+                                <li>দেশের বাইরে অবস্থানরত হলে- সর্বনিম্ন ১০০০/-</li>
+                            </ul>
+                        </li>
+                        <li><h4>অতিথি ফিঃ</h4>
+                            <ul>
+                                <li>৩-৫ বছরের শিশুর জন্য ফ্রি</li>
+                                <li>৫ বছরের উর্ধ্বে হলে জনপ্রতি ৩০০/-</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <span style="color: red;">* (তারকা) চিহ্নিত অংশ অবশ্যই পূরণীয়.</span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card content-center" style="border-radius: 40px; padding: 10px;">
+                    <form role="form" [formGroup]="bookingForm" #bookingMasterForm="ngForm">
+                        <div class="row" style="margin-top: 20px;">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-4 content-center">
+                                <input type="file" #fileInput formControlName="bookingForm_file" 
+                                placeholder="ছবি..." class="form-control" (focus)="photo=true" (blur)="photo=false"
+                                            (change)="onFileSelected($event)" accept="image/*" value="Photo"/>
+                                            <br/>
+                                <img [src]="imageUrl" alt="Image" class="rounded-circle"  height="120px">
+                            </div>
+                            <div class="col-md-7">
+                                <div class="card card-login card-plain">
+                                        <div class="content">
+                                            <div class="input-group form-group-no-border input-lg" [ngClass]="{'input-group-focus':focus===true}" >
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"> 
+                                                        <span style="color: red;">*</span> 
+                                                        <i class="now-ui-icons users_circle-08" style="color: #000000;"></i>
+                                                    </span>
+                                                    
+                                                </div>
+                                                <input type="text" class="form-control" placeholder="পূর্ণ নাম..."
+                                                data-toggle="tooltip" data-placement="right" title="Please write your full name (Bangla/English)"
+                                                formControlName="bookingForm_fullName">
+                                            </div>
+                                            <div class="input-group form-group-no-border input-lg" [ngClass]="{'input-group-focus':focus1===true}">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><i class="now-ui-icons text_caps-small" style="color: #000000;"></i></span>
+                                                </div>
+                                                <input type="text" placeholder="পিতার নাম..." class="form-control" 
+                                                data-toggle="tooltip" data-placement="right" title="Please write your Father's name (Bangla/English)"
+                                                formControlName="bookingForm_fathersName"/>
+                                            </div>
+                    
+                                            <div class="input-group form-group-no-border input-lg" [ngClass]="{'input-group-focus':focus2===true}">
+                                                <div class="input-group-prepend">
+                                                    
+                                                    <span class="input-group-text">
+                                                        <span style="color: red;">*</span>
+                                                        <i class="now-ui-icons tech_mobile" style="color: #000000;"></i></span>
+                                                </div>
+                                                <input type="number" placeholder="মোবাইল নাম্বার..." class="form-control" 
+                                                data-toggle="tooltip" data-placement="right" title="Please enter your Phone Number"
+                                                formControlName="bookingForm_mobileNo"/>
+                                            </div>
+                    
+                                            <div class="input-group form-group-no-border input-lg" [ngClass]="{'input-group-focus':email===true}">
+                                                <div class="input-group-prepend">
+                                                    
+                                                    <span class="input-group-text">
+                                                        <span style="color: red;">*</span>
+                                                        <i class="now-ui-icons ui-1_email-85" style="color: #000000;"></i></span>
+                                                </div>
+                                                <input type="email" placeholder="ইমেইল..." class="form-control" 
+                                                data-toggle="tooltip" data-placement="right" title="Please write your email"
+                                                formControlName="bookingForm_email"/>
+                                            </div>
+                    
+                                            <div class="input-group form-group-no-border input-lg" [ngClass]="{'input-group-focus':email===true}">
+                                                <div class="input-group-prepend">
+                                                    
+                                                    <span class="input-group-text">
+                                                        <span style="color: red;">*</span>
+                                                        <i class="now-ui-icons design_bullet-list-67" style="color: #000000;"></i>
+                                                    </span>
+                                                </div>
+                                                <select class="form-control" placeholder="SSC Batch..." 
+                                                formControlName="bookingForm_sscBatch" 
+                                                >
+                                                    <option value="-1" selected>এস.এস.সি ব্যাচঃ </option>
+                                                    <option *ngFor="let batch of ssc_batches" [value]="batch.id">{{ batch.name }}</option>
+                                                </select>
+                                            </div>
+                    
+                                            <div class="input-group form-group-no-border input-lg" [ngClass]="{'input-group-focus':villageName===true}">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><i class="now-ui-icons ui-1_send" style="color: #000000;"></i></span>
+                                                </div>
+                                                <input type="text" placeholder="গ্রামের নাম..." class="form-control" 
+                                                data-toggle="tooltip" data-placement="right" title="Please write your village name (Bangla/English)"
+                                                formControlName="bookingForm_villageName"/>
+                                            </div>
+                    
+                                            <div class="input-group form-group-no-border input-lg" [ngClass]="{'input-group-focus':presentAddress===true}">
+                                                <div class="input-group-prepend">
+                                                    
+                                                    <span class="input-group-text">
+                                                        <span style="color: red;">*</span>
+                                                        <i class="now-ui-icons location_world" style="color: #000000;"></i></span>
+                                                </div>
+                                                <!-- <input type="text" placeholder="বর্তমানে অবস্থানরত দেশের নাম..." class="form-control" 
+                                                (focus)="presentAddress=true" (blur)="presentAddress=false"  style="color: black; background-color: #0000001a;"
+                                                data-toggle="tooltip" data-placement="right" title="Please write your current country (English)"/> -->
+                                                <select class="form-control" placeholder="Living Country..."
+                                                formControlName="bookingForm_presentAddress" 
+                                                >
+                                                    <option value="-1" selected>বর্তমানে অবস্থানরত দেশের নাম</option>
+                                                    <option value="Bangladesh">Bangladesh</option>
+                                                    <option value="United Kingdom">United Kingdom</option>
+                                                    <option value="United States">United States</option>
+                                                    <option value="Canada">Canada</option>
+                                                    <option value="Australia">Australia</option>
+                                                    <option value="Middle East">Middle East</option>
+                                                    <option value="Others">Others</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="input-group form-group-no-border input-lg" [ngClass]="{'input-group-focus':guest===true}">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">
+                                                        <span style="color: red;">*</span>
+                                                        <i class="now-ui-icons business_badge" style="color: #000000;"></i>
+                                                    </span>
+                                                </div>
+                                                <input type="number" placeholder="অতিথি সংখ্যা..." class="form-control" 
+                                                data-toggle="tooltip" data-placement="right" title="Please enter guest number"
+                                                (change)="OnChangeGuestNo($event)"
+                                                formControlName="bookingForm_guestNo"/>
+                                            </div>
+
+                                            <div class="input-group form-group-no-border input-lg" [ngClass]="{'input-group-focus':amount===true}">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">
+                                                        <i class="now-ui-icons business_money-coins" style="color: #000000;"></i>
+                                                    </span>
+                                                </div>
+                                                <input type="number" placeholder="ফি (সর্বনিম্ন ১০০০/-)..." class="form-control" 
+                                                formControlName="bookingForm_amount"/>
+                                            </div>
+                                        </div>
+                                        <br/>
+                                        <div class="text-center">
+                                            <div class="row row justify-content-center">
+                                                <div class="col-md-6">
+                                                    <button type="button" (click)="SavePayLater()" class="btn btn-primary btn-round btn-lg btn-block"
+                                                    >Register</button>
+                                                </div>
+                                                <!-- <div class="col-md-6">
+                                                    <a href="#pablo" class="btn btn-primary btn-round btn-lg btn-block"
+                                                    style="height: 60px;">Pay now with Bkash</a>
+                                                </div> -->
+                                            </div>
+                                            
+                                        </div>
+                                         
+                                    <!-- </form> -->
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-1"></div>
+      </div>
+      <div class="row" *ngIf="showSuccessDiv">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <div class="card content-center" style="border-radius: 40px; padding: 20px; color: #000000;">
+                <h4>অভিনন্দন । আপনার রেজিস্ট্রেশন সম্পূর্ণ হয়েছে। আপনার আইডি নাম্বারঃ <b>{{createdId}}</b> ভবিষ্যতে যে কোন অনুসন্ধান এর জন্য আপনার আইডি নাম্বার ব্যবহার করুন । 
+                    <br/>বিঃদ্রঃ আপনার রেজিস্ট্রেশন ফি বাকী রয়েছে। নিম্নোক্ত উপায়ে আপনার রেজিস্ট্রেশন ফি পরিশোধ করুন । 
+                    <ol>
+                        <li>বিকাশ পেমেন্ট এর মাধ্যমে</li>
+                        <li>ব্যাংক ট্রান্সফার অথবা ডিপোজিট এর মাধ্যমে </li>
+                    </ol>
+                </h4>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+    <div class="row" *ngIf="showSuccessDiv" style="margin-top: 20px">
+        <div class="col-md-1"></div>
+        <div class="col-md-5">
+            <div class="card content-center" style="border-radius: 40px; padding: 20px; color: #000000;">
+                <div class="card-header" style="color: green;">বিকাশ পেমেন্ট</div>
+                <h4>
+                    <ol>
+                        <li>আপনার বিকাশ এপস এ লগিন করুন । </li>
+                        <li>পেমেন্ট অপশন সিলেক্ট করুন । </li>
+                        <li>"QR কোড স্ক্যান করতে ট্যাপ করুন" অপশনটি নির্বাচন করুন । এবং নিম্নোক্ত QR কোডটি স্ক্যান করুন। <br/>
+                            <img src="assets/img/bkash-payment.jpeg" alt="bkash payment" height="300px">
+                        </li>
+                        <li>এমাউন্ট এ আপনার টাকার পরিমাণ লিখুন</li>
+                        <li>রেফারেন্স এ আপনার আইডি নাম্বার (<b>{{createdId}}</b>) টি লিখুন অথবা [আপনার ব্যাচ - আপনার নাম] লিখুন</li>
+                        <li>আপনার পিন নাম্বার দিয়ে পেমেন্ট সম্পূর্ণ করুন ।</li>
+                    </ol>
+                </h4>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="card content-center" style="border-radius: 40px; padding: 20px; color: #000000;">
+                <div class="card-header" style="color: green;">ব্যাংক ট্রান্সফার অথবা ডিপোজিট</div>
+                <h4>
+                    <ul>
+                        <li>একাউন্ট নামঃ SYED SHOFIUL ALOM</li>
+                        <li>একাউন্ট নাম্বারঃ 1028437440001 </li>
+                        <li>ব্যাংকের নামঃ BRAC BANK LIMITED</li>
+                        <li>ব্রাঞ্চঃ SHYAMOLI BRANCH</li>
+                        <li>ROUTING NO: 060264307</li>
+                    </ul>
+                    <span style="color: red;">বিঃদ্রঃ রেফারেন্স এ আপনার আইডি (<b>{{createdId}}</b>) নাম্বারটি ব্যবহার করুন।</span>
+                </h4>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+    </div>
+    
+</div>

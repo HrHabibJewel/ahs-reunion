@@ -1,14 +1,14 @@
 /*!
 
 =========================================================
-* Resume Dropper
+* আদর্শ উচ্চ বিদ্যালয়, রুস্তমপুর
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/argon-dashboard-angular
-* Copyright 2019 Resume Dropper (https://www.creative-tim.com)
+* Copyright 2019 আদর্শ উচ্চ বিদ্যালয়, রুস্তমপুর (https://www.creative-tim.com)
 * Licensed under MIT (https://github.com/creativetimofficial/argon-dashboard-angular/blob/master/LICENSE.md)
 
-* Coded by Resume Dropper
+* Coded by আদর্শ উচ্চ বিদ্যালয়, রুস্তমপুর
 
 =========================================================
 

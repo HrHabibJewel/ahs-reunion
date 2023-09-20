@@ -1,16 +1,17 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
-
+import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-auth-layout',
   templateUrl: './auth-layout.component.html',
-  styleUrls: ['./auth-layout.component.scss']
+  styleUrls: ['./auth-layout.component.scss'],
+  providers: [NgbCarouselConfig]
 })
 export class AuthLayoutComponent implements OnInit, OnDestroy {
   test: Date = new Date();
   public isCollapsed = true;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, config: NgbCarouselConfig) { }
 
   ngOnInit() {
     var html = document.getElementsByTagName("html")[0];
