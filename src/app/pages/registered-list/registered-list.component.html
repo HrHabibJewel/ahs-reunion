@@ -1,0 +1,88 @@
+<div class="header bg-gradient-danger pb-8 pt-5 pt-md-8">
+    <div class="container-fluid">
+      <div class="header-body">
+        <!-- Card stats -->
+        
+      </div>
+    </div>
+</div>
+<div class="container-fluid mt--7" >
+    <div class="card shadow">
+        <div class="row">
+            <div class="col-md-1"></div>
+                <div class="col-md-4">
+                    <form class="form" method="" action="" style="margin-top: 100px;">
+                        <div class="content">
+                            <div class="row">
+                            <div class="input-group form-group-no-border input-lg col-md-4" [ngClass]="{'input-group-focus':name===true}" >
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">  <i class="now-ui-icons ui-1_zoom-bold"></i></span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Search by Name..." 
+                                (focus)="name=true" (blur)="name=false" (change)="SearchBookingList($event)">
+                            </div>
+                            <div class="input-group form-group-no-border input-lg col-md-4" [ngClass]="{'input-group-focus':name===true}" >
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">  <i class="now-ui-icons ui-1_zoom-bold"></i></span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Search by ID No..." 
+                                (focus)="name=true" (blur)="name=false" (change)="SearchBookingListById($event)">
+                            </div>
+                            <div class="input-group form-group-no-border input-lg col-md-4" [ngClass]="{'input-group-focus':name===true}" >
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">  <i class="now-ui-icons ui-1_zoom-bold"></i></span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Search by Mobile No..." 
+                                (focus)="name=true" (blur)="name=false" (change)="SearchBookingListByMobNo($event)">
+                            </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    
+                </div>
+            <div class="col-md-1"></div>
+        </div>
+        <div class="row" style="margin-bottom: 20px; margin-top: 20px;">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <table class="table table-bordered table-striped table-responsive">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <td>Id No</td>
+                            <th>Batch</th>
+                            <th>E-mail</th>
+                            <th>Booked On</th>
+                            <th>Payment Status</th>
+                            <th>Amount</th>
+                            <th>Payment Reference</th>
+                            <th>Photo</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of bookingList">
+                            <td>{{ item.fullName}}</td>
+                            <td>{{ item.tokenNo}}</td>
+                            <td>{{ item.sscBatch}}</td>
+                            <td>{{ item.email}}</td>
+                            <td>{{ item.actionDate}}</td>
+                            <td>{{ item.paymentStatus}}</td>
+                            <td>{{ item.amount}}</td>
+                            <td>{{item.paymentReference}}</td>
+                            <td><img [src]="item.imgbase" alt="Image"
+                                height="80px" width="80px" ></td>
+                            <td><button (click)="Update(item)">Update</button></td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+    
+    </div>
+    
+</div>

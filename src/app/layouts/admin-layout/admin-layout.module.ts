@@ -12,6 +12,10 @@ import { MapsComponent } from '../../pages/maps/maps.component';
 import { UserProfileComponent } from '../../pages/user-profile/user-profile.component';
 import { TablesComponent } from '../../pages/tables/tables.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { TrendingListComponent } from 'src/app/pages/trending-list/trending-list.component';
+import { CreateTrendingComponent } from 'src/app/pages/create-trending/create-trending.component';
+import { UpdatePaymentComponent } from 'src/app/pages/update-payment/update-payment.component';
+import { RegisteredListComponent } from 'src/app/pages/registered-list/registered-list.component';
 // import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
@@ -29,7 +33,11 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     UserProfileComponent,
     TablesComponent,
     IconsComponent,
-    MapsComponent
+    MapsComponent,
+    TrendingListComponent,
+    CreateTrendingComponent,
+    UpdatePaymentComponent,
+    RegisteredListComponent
   ]
 })
 

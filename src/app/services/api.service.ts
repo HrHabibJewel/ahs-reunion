@@ -35,4 +35,22 @@ export class ApiService {
     });
     return this.http.get<any>(getUrlfinal, { headers });
   }
+  downloadFile(fileName){
+    const headers = new HttpHeaders({
+      'content-type': 'application/json'
+    });
+    const _url =  this.baseURL + 'Booking/DownloadFromServer?filename='+fileName;
+    return this.http.get<any>(_url, { 'headers': headers });
+  }
+  UploadBanner(model: any, saveUrl: string): Observable<any> {
+    const saveUrlFinal = this.baseURL + saveUrl;
+    return this.http.post<any>(saveUrlFinal, model);
+  }
+  downloadBannerFile(fileName){
+    const headers = new HttpHeaders({
+      'content-type': 'application/json'
+    });
+    const _url =  this.baseURL + 'Trending/DownloadBannerFromServer?filename='+fileName;
+    return this.http.get<any>(_url, { 'headers': headers });
+  }
 }

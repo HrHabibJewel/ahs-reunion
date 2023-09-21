@@ -22,7 +22,7 @@ export class BookingComponent implements OnInit {
   ssc_batches:any[] = []; // Initialize an empty array
   minimumFee: number = 1000;
   totalFee: number = 0; 
-  showSuccessDiv = true;
+  showSuccessDiv = false;
   createdId = "IdNo";
 
   // Form Group Declaration
@@ -112,6 +112,7 @@ export class BookingComponent implements OnInit {
     this.apiService.saveFile(form, url).subscribe(
       (response)=>{
         if(response.status == "OK"){
+          this.SaveImages();
           this.createdId = response.result.tokenNo;
           this.bookingForm.reset();
           this.showSuccessDiv = true;
@@ -119,9 +120,19 @@ export class BookingComponent implements OnInit {
         else{
           alert(response.message);
           this.showSuccessDiv = false;
-        }
+        } 
       }
     );
+  }
+  SaveImages() {
+    const form = new FormData();
+    
+    form.append(
+      'file',
+      this.bookingForm.controls['fileSource'].value,
+    );
+
+    this.apiService.saveFile(form, 'Booking/UploadFileToServer').subscribe();
   }
 
 }

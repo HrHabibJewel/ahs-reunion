@@ -29,18 +29,17 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4"  *ngFor="let item of bookingList">
             <div class="card">
-                <img class="card-img-top" src="assets/img/Syl-5-10.09.23.jpg" alt="Card image cap">
+                <!-- <img class="card-img-top" [src]="item.imgbase" alt="Card image cap"> -->
                 <div class="card-body">
-                    <h5 class="card-title">আদর্শ উচ্চ বিদ্যালয় রুস্তমপুরের প্রাক্তন শিক্ষার্থীদের পুণর্মিলনী ১২ ও ১৩ জানুয়ারি</h5>
-                    <p class="card-text">সিলেটের দক্ষিণ সুরমা উপজেলার সিলাম ইউনিয়নের আদর্শ উচ্চ বিদ্যালয় রুস্তমপুর’র প্রাক্তন শিক্ষার্থীদের পুনর্মিলনী অনুষ্ঠানের সিদ্ধান্ত নেয়া হয়েছে।</p>
-                    <a href="#" class="btn btn-primary">Read More</a>
+                    <h5 class="card-title">{{item.title}}</h5>
+                    <p class="card-text">{{item.shortDescription}}</p>
+                    <a href="{{item.newsLink}}" target="_blank" class="btn btn-primary">Read More</a>
                 </div>
             </div>
-            
         </div>
-        <div class="col-md-4">
+        <!-- <div class="col-md-4">
             <div class="card">
                 <img class="card-img-top" src="assets/img/Syl-5-10.09.23.jpg" alt="Card image cap">
                 <div class="card-body">
@@ -59,7 +58,7 @@
                     <a href="#" class="btn btn-primary">Read More</a>
                 </div>
             </div>
-        </div>
+        </div> -->
       </div>
     </div>
     

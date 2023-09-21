@@ -4,7 +4,7 @@
 
 export const environment = {
   production: true,
-  // api_base_common_url: 'https://localhost:7211/api/',
+  // api_base_common_url: 'https://localhost:44341/api/',
   api_base_common_url: 'http://115.127.77.116/ahsr/api/',
 };
 

@@ -1,0 +1,98 @@
+<div class="header bg-gradient-danger pb-8 pt-5 pt-md-8">
+    <!-- <div class="container-fluid">
+      <div class="header-body">
+      </div>
+    </div> -->
+</div>
+  <!-- Page content -->
+  <div class="container-fluid mt--7">
+    <div class="card shadow">
+        <div class="row"  style="margin-top: 20px;">
+            <div class="col-md-2"></div>
+            <div class="col-md-8 content-center">
+                <div class="card content-center" style="border-radius: 40px; padding: 10px;">
+                    <form role="form" [formGroup]="newsForm" #newsMasterForm="ngForm">
+                        <div class="row" style="margin-top: 20px;">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-4 content-center">
+                                <input type="file" placeholder="ছবি..." class="form-control" (focus)="photo=true" (blur)="photo=false"
+                                            (change)="onFileSelected($event)" accept="image/*" value="Photo"/>
+                                            <br/>
+                                <img [src]="imageUrl" alt="Image" class="rounded-circle" height="200px" width="200px" />
+                            </div>
+                            <div class="col-md-7">
+                                <div class="card card-login card-plain">
+                                    <!-- <form class="form" method="" action=""> -->
+                                        <div class="content">
+                                            <div class="input-group form-group-no-border input-lg" [ngClass]="{'input-group-focus':focus===true}" >
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">  
+                                                    <i class="now-ui-icons location_bookmark" style="color: #000000;"></i></span>
+                                                </div>
+                                                <input type="text" class="form-control" placeholder="নিউজ টাইটেল..." 
+                                                (focus)="focus=true" 
+                                                (blur)="focus=false"
+                                                data-toggle="tooltip" 
+                                                data-placement="right" title="Please write news title (Bangla/English)"
+                                                formControlName="newsForm_title">
+                                            </div>
+                                            <div class="input-group form-group-no-border input-lg" [ngClass]="{'input-group-focus':focus1===true}">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">
+                                                        <i class="now-ui-icons files_paper" style="color: #000000;"></i></span>
+                                                </div>
+                                                <input type="text" placeholder="এক লাইনের বিবরণ..." class="form-control" 
+                                                (focus)="focus1=true" (blur)="focus1=false" 
+                                                data-toggle="tooltip" data-placement="right" 
+                                                title="Please write one line description (Bangla/English)"
+                                                formControlName="newsForm_shortDescription"/>
+                                            </div>
+                    
+                                            <div class="input-group form-group-no-border input-lg" [ngClass]="{'input-group-focus':focus2===true}">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">
+                                                        <i class="now-ui-icons design_bullet-list-67" style="color: #000000;"></i></span>
+                                                </div>
+                                                <textarea class="form-control" name="name" rows="1" cols="1" placeholder="সম্পূর্ণ নিউজ..."
+                                                data-toggle="tooltip" data-placement="right" title="Please write your full news"
+                                                formControlName="newsForm_description">
+                                                    
+                                                </textarea>
+                                            </div>
+                    
+                                            <div class="input-group form-group-no-border input-lg" [ngClass]="{'input-group-focus':email===true}">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">
+                                                        <i class="now-ui-icons location_world" style="color: #000000;"></i></span>
+                                                </div>
+                                                <input type="text" placeholder="নিউজ লিংক..." class="form-control" 
+                                                (focus)="email=true" (blur)="email=false" 
+                                                data-toggle="tooltip" data-placement="right" title="Please input news link"
+                                                formControlName="newsForm_newsLink"/>
+                                            </div>
+                                        </div>
+                                        <div class="text-center">
+                                            <!-- <a href="#pablo" class="btn btn-primary btn-round btn-block">Upload</a> -->
+                                            <button class="btn btn-primary btn-round btn-block" (click)="SaveNews()">Upload</button>
+                                        </div>
+                                    <!-- </form> -->
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <div class="row" style="margin-bottom: 20px;">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+    
+  </div>
+  

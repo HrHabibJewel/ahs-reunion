@@ -1,0 +1,78 @@
+<div class="header bg-gradient-danger pb-8 pt-5 pt-md-8">
+    <!-- <div class="container-fluid">
+      <div class="header-body">
+      </div>
+    </div> -->
+</div>
+<!-- Page content -->
+<div class="container-fluid mt--7">
+    <div class="card shadow">
+        <div class="row"  style="margin-top: 20px;">
+            <div class="col-md-2"></div>
+            <div class="col-md-8 content-center">
+                <div class="card content-center" style="border-radius: 40px; padding: 10px;">
+                    <form role="form" [formGroup]="updateForm" #updateMasterForm="ngForm">
+                        <div class="row" style="margin-top: 20px;">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8">
+                                <div class="card card-login card-plain">
+                                    <!-- <form class="form" method="" action=""> -->
+                                        <div class="content">
+                                            <div class="input-group form-group-no-border input-lg">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">  
+                                                    <i class="now-ui-icons location_bookmark" style="color: #000000;"></i></span>
+                                                </div>
+                                                <input type="text" class="form-control" placeholder="Name..." 
+                                                data-toggle="tooltip" 
+                                                data-placement="right" title="Please write news title (Bangla/English)"
+                                                formControlName="updateForm_name" disabled>
+                                            </div>
+                                            <div class="input-group form-group-no-border input-lg">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">
+                                                        <i class="now-ui-icons files_paper" style="color: #000000;"></i></span>
+                                                </div>
+                                                <input type="number" placeholder="Amount..." class="form-control" 
+                                                
+                                                data-toggle="tooltip" data-placement="right" 
+                                                
+                                                formControlName="updateForm_amount"/>
+                                            </div>
+                    
+                                            <div class="input-group form-group-no-border input-lg">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">
+                                                        <i class="now-ui-icons location_world" style="color: #000000;"></i></span>
+                                                </div>
+                                                <input type="text" placeholder="Reference No..." class="form-control" 
+                                                
+                                                data-toggle="tooltip" data-placement="right" title="Please input news link"
+                                                formControlName="updateForm_referenceNo"/>
+                                            </div>
+                                        </div>
+                                        <div class="text-center">
+                                            <!-- <a href="#pablo" class="btn btn-primary btn-round btn-block">Upload</a> -->
+                                            <button class="btn btn-primary btn-round btn-block" (click)="Update()">Update</button>
+                                        </div>
+                                    <!-- </form> -->
+                                </div>
+                            </div>
+                            <div class="col-md-2"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <div class="row" style="margin-bottom: 20px;">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+    
+  </div>
+  
